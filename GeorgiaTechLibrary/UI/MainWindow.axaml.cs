@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace GeorgiaTechLibrary
+namespace UI
 {
     public class MainWindow : Window
     {

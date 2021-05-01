@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Linq;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
-using GeorgiaTechLibrary.Model;
 
-namespace GeorgiaTechLibrary
+namespace UI
 {
     class Program
     {
@@ -20,16 +18,5 @@ namespace GeorgiaTechLibrary
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
                 .LogToTrace();
-
-        // DB connection test
-        // private static void Main()
-        // {
-        //     var db = new GeorgiaTechLibraryContext();
-        //     Console.WriteLine("Querying for an address");
-        //     var address = db.Addresses
-        //                 .OrderBy(b => b.Id)
-        //                 .FirstOrDefault();
-        //     Console.WriteLine(address);
-        // }
     }
 }

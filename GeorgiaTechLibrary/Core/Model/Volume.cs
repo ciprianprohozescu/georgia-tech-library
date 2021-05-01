@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace GeorgiaTechLibrary.Model
+namespace Core.Model
 {
     public partial class Volume
     {
