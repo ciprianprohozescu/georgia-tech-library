@@ -1,0 +1,15 @@
+insert into Loan (member_id, volume_id, book_id, loan_date, return_date, due_date) values (1, 1, 1, 20200323, 20200413, 20200413);
+insert into Loan (member_id, volume_id, book_id, loan_date, return_date, due_date) values (1, 1, 1, 20200428, 20200601, 20200519);
+insert into Loan (member_id, volume_id, book_id, loan_date, return_date, due_date) values (1, 2, 4, 20201002, 20201118, 20201023);
+insert into Loan (member_id, volume_id, book_id, loan_date, return_date, due_date) values (1, 1, 3, 20210314, 20210329, 20210404);
+insert into Loan (member_id, volume_id, book_id, loan_date, return_date, due_date) values (2, 1, 4, 20210107, 20210211, 20210128);
+insert into Loan (member_id, volume_id, book_id, loan_date, return_date, due_date) values (2, 2, 4, 20201118, 20201228, 20201209);
+insert into Loan (member_id, volume_id, book_id, loan_date, return_date, due_date) values (2, 1, 4, 20200722, 20200815, 20200812);
+insert into Loan (member_id, volume_id, book_id, loan_date, return_date, due_date) values (2, 1, 3, 20200510, 20200528, 20200531);
+insert into Loan (member_id, volume_id, book_id, loan_date, return_date, due_date) values (2, 1, 3, 20201231, 20210210, 20210121);
+insert into Loan (member_id, volume_id, book_id, loan_date, return_date, due_date) values (2, 1, 3, 20210221, 20210408, 20210314);
+insert into Loan (member_id, volume_id, book_id, loan_date, return_date, due_date) values (2, 1, 1, 20200926, 20201031, 20201017);
+insert into Loan (member_id, volume_id, book_id, loan_date, return_date, due_date) values (3, 1, 1, 20200221, 20200329, 20200313);
+insert into Loan (member_id, volume_id, book_id, loan_date, return_date, due_date) values (3, 1, 4, 20201227, 20210214, 20210117);
+insert into Loan (member_id, volume_id, book_id, loan_date, return_date, due_date) values (3, 1, 4, 20200410, 20200516, 20200501);
+insert into Loan (member_id, volume_id, book_id, loan_date, return_date, due_date) values (3, 1, 3, 20200226, 20200414, 20200318);
