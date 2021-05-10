@@ -26,6 +26,7 @@ CREATE TABLE Member (
 
 CREATE TABLE Book (
     id int IDENTITY(1,1) PRIMARY KEY,
+	isbn varchar(255),
     title varchar(255),
     year smallint,
     language varchar(255),
