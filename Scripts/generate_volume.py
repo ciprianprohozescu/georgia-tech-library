@@ -3,13 +3,13 @@ import random
 random.seed()
 f = open("populate_volume.sql", "w")
 
-bookTotal = 100
+bookTotal = 10000
 
 for i in range(1, bookTotal + 1):
-    volumeTotal = random.randint(0, 5)
+    volumeTotal = random.randint(0, 100)
     if volumeTotal == 0:
         continue
-    volumeTotal = volumeTotal - 1
+    volumeTotal = random.randint(1, 5)
 
     for j in range(1, volumeTotal + 1):
         library = random.randint(0, 5)
@@ -29,7 +29,7 @@ for i in range(1, bookTotal + 1):
             acquiryDate = acquiryDate + str(day)
 
         if library != 0:
-            f.write(f'insert into Volume (id, book_id, source_library_id, acquiry_date) values ({j}, {i}, {library}, {acquiryDate});\n')
+            f.write(f"insert into Volume (id, book_id, source_library_id, acquiry_date) values ({j}, {i}, {library}, '{acquiryDate}');\n")
         else:
             f.write(f'insert into Volume (id, book_id) values ({j}, {i});\n')
             

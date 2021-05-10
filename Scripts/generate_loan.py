@@ -7,8 +7,8 @@ import time
 random.seed()
 f = open("populate_loan.sql", "w")
 
-memberTotal = 3
-bookTotal = 4
+memberTotal = 10000
+bookTotal = 10000
 
 with open('book_volume_count.json') as jsf:
     volumeJson = json.load(jsf)
@@ -32,6 +32,6 @@ for member in range(1, memberTotal + 1):
         loanLength = random.randint(6, 50)
         returnDateTime = loanDateTime + timedelta(days=loanLength)
         if loanLength == 6:
-            f.write(f'insert into Loan (member_id, volume_id, book_id, loan_date, due_date) values ({member}, {volumeId}, {bookId}, {loanDateTime.strftime("%Y%m%d")}, {dueDateTime.strftime("%Y%m%d")});\n')
+            f.write(f'insert into Loan (member_id, volume_id, book_id, loan_date, due_date) values ({member}, {volumeId}, {bookId}, \'{loanDateTime.strftime("%Y%m%d")}\', \'{dueDateTime.strftime("%Y%m%d")}\');\n')
         else:
-            f.write(f'insert into Loan (member_id, volume_id, book_id, loan_date, return_date, due_date) values ({member}, {volumeId}, {bookId}, {loanDateTime.strftime("%Y%m%d")}, {returnDateTime.strftime("%Y%m%d")}, {dueDateTime.strftime("%Y%m%d")});\n')
+            f.write(f'insert into Loan (member_id, volume_id, book_id, loan_date, return_date, due_date) values ({member}, {volumeId}, {bookId}, \'{loanDateTime.strftime("%Y%m%d")}\', \'{returnDateTime.strftime("%Y%m%d")}\', \'{dueDateTime.strftime("%Y%m%d")}\');\n')
