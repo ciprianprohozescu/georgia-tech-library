@@ -1,0 +1,5 @@
+insert into Library (name, agreement) values ('Alabama State University Library', 'We can exchange books that can be given away freely')
+insert into Library (name, agreement) values ('Florida Grand Library', 'Individual agreements will be discussed per book')
+insert into Library (name, agreement) values ('Manhattan University Library', 'Acquiring a book requires a book in return')
+insert into Library (name, agreement) values ('Texas Tech Library', 'We can acquire books for the right price')
+insert into Library (name, agreement) values ('Utah Library', 'We can browse book availability and prices on their online platform')
