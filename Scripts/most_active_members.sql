@@ -1,8 +1,11 @@
-select ssn, fname, lname, count(alltime.loan_date) as loans_all_time, count(lastmonth.loan_date) as loans_last_month, count(overdue.loan_date) / count(alltime.loan_date) * 100 as loans_overdue 
+select Member.id, ssn, fname, lname, count(Loan.loan_date) as loans_all_time, 
+case when sum(case when Loan.loan_date >= DATEADD(MONTH, -1, GETDATE()) then 1 end) is not null 
+then sum(case when Loan.loan_date >= DATEADD(MONTH, -1, GETDATE()) then 1 end) 
+else 0 end as loans_last_month, 
+case when sum(case when (Loan.return_date is null or Loan.return_date > Loan.due_date) then 1 end) is not null
+then sum(case when (Loan.return_date is null or Loan.return_date > Loan.due_date) then 1 end)
+else 0 end as loans_overdue 
 from Member
-join Loan as alltime on Member.id = alltime.member_id
-join Loan as lastmonth on Member.id = lastmonth.member_id
-join Loan as overdue on Member.id = overdue.member_id
-where lastmonth.loan_date >= DATEADD(MONTH, -1, GETDATE()) and (overdue.return_date is null or overdue.return_date > overdue.loan_date)
+join Loan on Member.id = Loan.member_id
 group by Member.id, Member.ssn, Member.fname, Member.lname
 order by loans_all_time desc;
