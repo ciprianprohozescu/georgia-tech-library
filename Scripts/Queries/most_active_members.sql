@@ -6,6 +6,6 @@ case when sum(case when (Loan.return_date is null or Loan.return_date > Loan.due
 then sum(case when (Loan.return_date is null or Loan.return_date > Loan.due_date) then 1 end)
 else 0 end as loans_overdue 
 from Member
-join Loan on Member.id = Loan.member_id
+left join Loan on Member.id = Loan.member_id
 group by Member.id, Member.ssn, Member.fname, Member.lname
 order by loans_all_time desc;
