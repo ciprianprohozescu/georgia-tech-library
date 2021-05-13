@@ -21,7 +21,7 @@ begin
         join Member on Loan.member_id = Member.id
         where Loan.book_id = @bookId and Loan.volume_id = @counter and Loan.return_date is null;
         if @loanDate is null print concat('Volume ', @counter, ' is currently available')
-        else print concat('Volume ', @counter, ' is currently held by ', @fname, ' ', @lname, ' (SSN ', @ssn, '), loaned on ', @loanDate, ', due on', @dueDate);
+        else print concat('Volume ', @counter, ' is currently held by ', @fname, ' ', @lname, ' (SSN ', @ssn, '), loaned on ', @loanDate, ', due on ', @dueDate);
         set @counter = @counter + 1;
     end
 end
