@@ -9,3 +9,19 @@ as begin
 end;
 
 drop trigger trg_delete_volumes_instead_of_book;
+
+delete from Book
+where id = 1;
+
+select * from Volume
+where book_id = 1;
+
+select * from Book
+where id = 1;
+
+select Book.id, Book.title from Book
+left outer join Loan on Loan.book_id = Book.id
+where Loan.book_id is null;
+
+delete from Loan
+where book_id = 1;
