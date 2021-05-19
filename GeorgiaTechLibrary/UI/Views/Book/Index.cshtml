@@ -1,0 +1,22 @@
+﻿
+@model Application.ViewModels.BookViewModel
+
+<table id="book" class="table table-bordered table-hover">
+    <thead>
+        <tr class="">
+            <th>ID</th>
+            <th>ISBN</th>
+            <th>Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model.Books)
+        {
+            <tr style="height: 60px;">
+                <td>@book.Id</td>
+                <td>@book.ISBN</td>
+                <td>@book.Title</td>
+            </tr>
+        }
+    </tbody>
+</table>
