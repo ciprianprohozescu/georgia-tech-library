@@ -6,10 +6,17 @@
 
   <ItemGroup>
     <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
-    <Folder Include="ViewModels\" />
+    <Folder Include="Books\" />
+    <Folder Include="Books\Commands\" />
+    <Folder Include="Books\Queries\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.6" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
   </ItemGroup>
 </Project>
