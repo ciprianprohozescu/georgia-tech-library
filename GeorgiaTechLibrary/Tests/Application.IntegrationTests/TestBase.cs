@@ -12,5 +12,11 @@ namespace Tests.Application.IntegrationTests
         {
             await ResetState();
         }
+
+        [TearDown]
+        public async Task TestTearDown()
+        {
+            await ResetState();
+        }
     }
 }

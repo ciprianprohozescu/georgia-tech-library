@@ -70,10 +70,5 @@ namespace Tests.Application.IntegrationTests
 
             await context.SaveChangesAsync();
         }
-
-        [OneTimeTearDown]
-        public void RunAfterAnyTests()
-        {
-        }
     }
 }
