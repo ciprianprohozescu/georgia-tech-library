@@ -11,7 +11,14 @@ namespace WebUI.Controllers
     public class BooksController : ApiControllerBase
     {
         [HttpGet]
+        [Route("all")]
         public async Task<IEnumerable<BookDto>> GetBooks([FromQuery] GetBooksQuery query)
+        {
+            return await Mediator.Send(query);
+        }
+
+        [HttpGet]
+        public async Task<IEnumerable<BookDto>> GetBooksByTitle([FromQuery] GetBooksByTitleQuery query)
         {
             return await Mediator.Send(query);
         }
