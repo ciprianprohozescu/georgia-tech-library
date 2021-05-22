@@ -70,5 +70,15 @@ namespace Tests.Application.IntegrationTests
 
             await context.SaveChangesAsync();
         }
+
+        public static async Task<TEntity> FindAsync<TEntity>(params object[] keyValues)
+        where TEntity : class
+        {
+            using var scope = _scopeFactory.CreateScope();
+
+            var context = scope.ServiceProvider.GetService<LibraryDbContext>();
+
+            return await context.FindAsync<TEntity>(keyValues);
+        }
     }
 }

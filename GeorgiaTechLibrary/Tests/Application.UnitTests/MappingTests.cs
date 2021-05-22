@@ -31,7 +31,6 @@ namespace CleanArchitecture.Application.UnitTests.Common.Mappings
         
         [Test]
         [TestCase(typeof(Book), typeof(BookDto))]
-        [TestCase(typeof(Book), typeof(BookDto))]
         public void ShouldSupportMappingFromSourceToDestination(Type source, Type destination)
         {
             var instance = GetInstanceOf(source);
